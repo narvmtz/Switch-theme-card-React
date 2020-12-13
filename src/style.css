@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapperMain {
+  height: 100vh;
+  background-color: #2d2d2d;
+}
+
+.wrapperMain-light {
+  background-color: #f0f0f0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #417097;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #fdc67d;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1rem);
+  -ms-transform: translateX(1rem);
+  transform: translateX(1rem);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.main__card {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 1rem;
+  width: 18rem;
+  height: 28rem;
+  border-radius: 0.5rem;
+  background-color: #252526;
+  box-shadow: 10px 10px 55px -10px #5b5b5b;
+}
+.card-light {
+  background-color: #fff;
+  box-shadow: 10px 10px 55px -10px rgba(135, 132, 135, 1);
+}
+
+.header {
+  color: #fff;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header-light {
+  color: #000;
+}
+
+.menu,
+.profile,
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heartFilled {
+  color: #f26798;
+  animation: grow 0.25s cubic-bezier(0.05, 0.75, 0.83, 0.67);
+}
+@keyframes grow {
+  25% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.img__avatar {
+  width: 5rem;
+  border: solid 0.1rem #f0f0f0;
+  border-radius: 5rem;
+}
+
+.img__avatar-light {
+  box-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.paragraph {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.paragraph-light {
+  color: #000;
+}
+
+.paragraph h1 {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+h2 {
+  margin: 1rem 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+span,
+p {
+  margin: 0.5rem 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: block;
+  margin: 1rem auto;
+  width: 45%;
+  padding: 0.5rem 0;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(200, 200, 200, 0.16),
+    0 3px 6px rgba(200, 200, 200, 0.23);
+  color: #fff;
+  background-color: #2196f3;
+  border: solid 1px #5e9ccc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+}
+
+.button-light {
+  color: #fff;
+  background-color: #1e87db;
+  border: solid 1px #64b6f7;
+  box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #2d87d1;
+  border: solid 1px #3184c4;
+}
+.button-light:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #2196f3;
+  border: solid 1px #5e9ccc;
+}
+
+button:focus {
+  outline: none;
+}
+
+hr {
+  width: 85%;
+  height: 0.05rem;
+  border: none;
+  background: rgb(230, 230, 230);
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(242, 242, 242, 1) 50%,
+    rgba(230, 230, 230, 1) 100%
+  );
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  margin: 1rem 1.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.social-light {
+  color: #000;
+}
+
+.social__image {
+  width: 45px;
+  border-radius: 3rem;
+  box-shadow: 1px 3px 6px rgba(230, 230, 230, 0.161),
+    1px 3px 6px rgba(230, 230, 230, 0.231);
+}
+
+.social__image-light {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.text-light {
+  color: #8f8d8d;
+}
+.text-dark {
+  color: #fff;
+}
